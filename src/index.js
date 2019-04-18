@@ -48,6 +48,11 @@ let md = `
 + NodeJS\n
 + Webpack\n
 <br>
+###${sub}Contact Info\n
++ mail: web_dev@tutanota.com\n
++ skype: eric.posas\n
++ github: github.com/ericposas\n
+<br>
 <br>
 `;
 
