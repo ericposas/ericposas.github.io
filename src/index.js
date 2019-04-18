@@ -1,7 +1,14 @@
-import './scss/style.scss';
-import $ from 'jquery';
-import showdown from 'showdown';
-const converter = new showdown.Converter();
+import './scss/style.scss'
+import $ from 'jquery'
+import fontLoader from 'webfontloader'
+import showdown, { Converter } from 'showdown'
+const converter = new Converter()
+
+fontLoader.load({
+  google: {
+    families: [ 'Ubuntu' ]
+  }
+});
 
 let sp = '&nbsp;', sub = sp+sp+sp, sub2 = sub+sub, sub3 = sub2+sub2;
 
@@ -27,15 +34,17 @@ let md = `
 - Variety of new client work included Breo, Taco Bueno, Community Coffee, and Walden University\n
 <br>
 ##${sub}Sector 5 Digital\n
-###${sub2}Front End Developer (late 2017)\n
+###${sub2}Front End Developer (late 2017 - present)\n
 - Created an augmented 360 web application for American Airlines\n
-- Developed the Sector5 website using GSAP, vanilla JS, and parallax effects\n
-- Completed a database + flight simulator project that included front and back end technologies (SQL, PHP, JS/HTML/CSS)\n
-- Currently working in NodeJS and Webpack, utilizing ES6 features\n
+- Working in NodeJS and Webpack daily, utilizing ES6 features\n
+- Developed the Sector5 website using GSAP, VanillaJS, and parallax effects\n
+- Completed a database + flight simulator (front-end) project that included front and back end technologies (SQL, PHP, JS/HTML/CSS)\n
+- Developed data-heavy visualization animations using PixiJS WebGL\n
+- Working on part two of the flight sim (front-end) project which will utilize ExpressJS server + MongoDB with React front-end\n
 <br>
-###${sub}Current Tech Interests\n
-+ React\n
-+ Phaser\n
+###${sub}Current Tech Interests & Tools\n
++ React & Redux\n
++ MongoDB\n
 + NodeJS\n
 + Webpack\n
 <br>
@@ -43,5 +52,4 @@ let md = `
 `;
 
 let html = converter.makeHtml( md );
-console.log( html );
 $('body').append(html);
