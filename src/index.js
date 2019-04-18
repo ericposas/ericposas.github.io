@@ -13,8 +13,8 @@ fontLoader.load({
 let sp = '&nbsp;', sub = sp+sp+sp, sub2 = sub+sub, sub3 = sub2+sub2;
 
 let md = `
-#Eric Posas\n
-##Front End Web Developer \n
+#${sub}Eric Posas\n
+##${sub}Front End Web Developer \n
 <br>
 ##${sub}TM Advertising\n
 ###${sub2}Flash Developer (2013)\n
