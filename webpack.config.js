@@ -4,8 +4,8 @@ const PugPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname + '/dist'),
-    filename: './js/index.js'
+    path: path.resolve(__dirname),
+    filename: './index.js'
   },
   mode: 'development',
   watchOptions: {
